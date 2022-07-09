@@ -1,0 +1,67 @@
+body
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+html
+{
+	height: 100%;
+	width: 100%;
+}
+
+textarea
+{
+	width: 500px; 
+	height: 50px; 
+	resize: none;
+}
+
+textarea:focus
+{
+	width: 500px; 
+	height: 500px; 
+	resize: none;
+}
+
+input[type=text]
+{
+	width: 500px;
+}
+
+#num 
+{
+	content: none;
+	display: none; 
+}
+
+#disp:checked ~ #num 
+{ 
+	display: inline; 
+	width: 60px;
+}
+
+.flexRow
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.flexCol
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.full
+{
+	height: 100%;
+	width: 100%;
+}
+
+.center
+{
+	justify-content: center;
+	align-items: center;
+}

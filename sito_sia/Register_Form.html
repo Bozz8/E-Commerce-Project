@@ -1,0 +1,36 @@
+	<html>
+	<head>
+		<title>Registrazione Account E-Commerce</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/styleF.css">
+	</head>
+	<body>
+		<div style = "text-align: center; margin-top: 25px"><h1>Benvenuto nel form di registrazione di EStore</h1></div>
+		<form action="Register.php" method="POST">
+			<div id = "parent" class = "center">
+				<div style = "display: flex; -webkit-box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.75);-moz-box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.75);box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.75);border-radius: 15px;background: #666;">
+					<div class = "table-left" style = "margin-top:20px;">
+						<p>Username:</p>
+						<p>Nome:</p>
+						<p>Cognome:</p>
+						<p>Data di nascita:</p>
+						<p>Sesso:</p>
+						<p>Email</p>
+						<p>Password:</p>
+						<p></p>
+					</div>
+					<div class = "table-right" style = "margin-right:5px; margin-top:20px;">
+						<p><input type="text" name="username"></p>
+						<p><input type="text" name="name"></p>
+						<p><input type="text" name="surname"></p>
+						<p><input input type="date" name="date" placeholder="GG-MM-AAAA"></p>
+						<p>Uomo<input type="radio" name="gender" value="1" checked> Donna<input type="radio" name="gender" value="2"></p>
+  						<p><input type="email" name="mail"></p>
+						<p><input type="password" name="password"></p>
+						<p><input style = "margin-left: 5px;" type="submit" name="send" value="Registrati" class = "ubbuttuni"></p>
+					</div>	
+				</div>
+			</div>
+		</form>	
+	</body>
+</html>

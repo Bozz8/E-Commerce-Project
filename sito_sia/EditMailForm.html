@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Modifica Email</title>
+	<link rel="stylesheet" type="text/css" href="css/styleF.css">
+</head>
+<body>
+	<div style = "text-align: center; margin-top: 25px"><b>Modifica la tua email</b></div>
+	<form action = "EditMail.php" method = "POST" autocomplete = "off">
+		<div id = "parent">
+			<div class = "table-left">
+					<p>Inserisci la password attuale: </p>
+					<p>Inserisci la nuova email:</p>
+					<p>Conferma la nuova email:</p>
+			</div>
+			<div class = "table-right">	
+					<p><input type = "password" name = "CurrPass"></p>
+					<p><input type = "email" name = "NewMail"></p>
+					<p><input type = "email" name = "ConfNewMail"></p>
+			</div>
+		</div>
+		<div style = "display: flex; justify-content: center; margin-top: 25px;">
+			<input type = "submit" value = "Conferma">
+		</div>
+	</form>		
+</body>
+</html>

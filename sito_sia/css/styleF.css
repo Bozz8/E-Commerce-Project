@@ -1,0 +1,33 @@
+#parent	{
+   	display: flex;
+	flex-direction: row;
+	margin-top: 35px;
+	height: auto;
+	width: 100%;
+}
+
+.table-right	{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin-left: 5px;
+	width: 100%;
+}
+
+.table-left	{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;	
+	justify-content: center;
+	margin-right: 5px;
+	width: 100%;
+}
+
+
+p 	{
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,66 @@
+<div id = "topbar" class = "flexRow">
+			<a href = "index.php" style = "display: inline; margin: 0; padding: 0" >
+				<div class="logo">
+				</div>
+			</a>
+            <div class="search">
+                <form class = "flexRow" style = "height: 90%" action = "Ricerca_Prodotto.php" method = "GET" >
+                    <select name = "categoria">
+                        <option value = "All">
+                            Tutti
+                        </option>
+                        <?php
+                            require_once 'categories.php';
+                            foreach($categories as $c)
+                            {
+                                echo"   <option value = '$c' ";
+                                if(isset($_GET['categoria']) || !empty($_GET['categoria']))
+                                    if($_GET['categoria'] == $c)
+                                        echo "selected";
+                                echo ">
+                                           $c
+                                        </option>";
+                            }           
+                        ?>
+                    </select>
+                    <input class = "searchbar" type = "search" name = "search" size = "200" placeholder = "Cerca...">
+                </form>
+            </div>
+            <div class = "links">
+                <?php
+                    if(!isset($_SESSION["loginStatus"])) echo '
+                        <a href = "Register_Form.html"><i class = "fa"></i> Registrati</a>';
+
+                    else echo "Benvenuto " . $_SESSION['nome'] . " " . $_SESSION['cognome'];
+                ?>
+            </div>
+</div>
+<div id = "Title" class = "flexRow">
+    <div class = "upperlinks">
+        <a href="myaccount.php"><i class="fa fa-user"></i> Il mio account</a>
+    </div>
+    <div class = "upperlinks">
+        <a href="Basket.php"><i class="fa fa-shopping-cart"></i> Carrello</a>
+    </div>  
+    <div class = "upperlinks">      
+        <a href="Catalogo.php"><i class="fa fa-list"></i> Catalogo</a>
+    </div> 
+    <div class="login_wrapper">
+        <?php
+			if(!isset($_SESSION["loginStatus"])) { echo '
+					<span>Accedi:</span>
+						<form action="Login.php" method="POST">
+							<input id="userbox" type="text" name="username" placeholder="Username" size="15" value = "';
+							echo '">
+							<input type="password" name="password" placeholder="Password" size="15">
+							<input type="submit" name="" style = "display:none;">				
+							</form>'; }
+			else echo '
+						<form action="Logout.php" method="POST">
+                                    <button type = "submit">
+                                        <i class="fa fa-sign-out" aria-hidden="true">Esci</i>
+                                    </button>                                   
+                        </form>';
+		?>
+    </div>
+</div>
